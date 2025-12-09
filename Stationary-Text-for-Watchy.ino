@@ -1,6 +1,7 @@
 #include <Watchy.h> //include the Watchy library
 #include "NunitoSans_Bold28pt7b.h"
 #include "NunitoSans_Light28pt7b.h"
+#include "settings.h"
         
 
 class WatchFace : public Watchy { //inherit and extend Watchy class
@@ -72,7 +73,7 @@ class WatchFace : public Watchy { //inherit and extend Watchy class
     }
 };
 
-WatchFace m; //instantiate your watchface
+WatchFace m(settings); //instantiate your watchface
 
 void setup() {
   m.init(); //call init in setup
