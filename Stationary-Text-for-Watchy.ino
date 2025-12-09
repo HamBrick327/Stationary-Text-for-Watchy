@@ -6,6 +6,9 @@
 
 class WatchFace : public Watchy { //inherit and extend Watchy class
   public:
+
+WatchFace(const watchySettings& s) : Watchy(s) {}
+
     void drawWatchFace() { //override this method to customize how the watch face looks
       uint16_t lines = 0;
       const char *lows [10] = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
